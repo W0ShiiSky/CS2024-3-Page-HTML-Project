@@ -1,16 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Pinnacle Accountants LLP</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Header Navigation Styling */
+        .navbar {
+            margin-bottom: 0;
+            background-color: #f8f9fa;
+        }
+        .navbar-nav li a {
+            color: #000;
+        }
+        .navbar-nav li a:hover, .navbar-nav li a:active {
+            color: #007bff;
+        }
+        .navbar-right {
+            margin-right: 10px;
+        }
+        .search-icon {
+            padding: 6px 12px;
+        }
+        .fa-search {
+            font-size: 16px;
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            position: relative;
+            background-image: url('W0ShiiSky/CS2024-3-Page-HTML-Project/images/company overview.jpg');
+            background-position: center;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-content {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 40px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .btn-discover-more {
+            margin-top: 20px;
+            background-color: white;
+            color: black;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .btn-discover-more:hover {
+            background-color: #ddd;
+        }
+
+        /* Team Section Styling */
+        .team-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .team-section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .team-member h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .team-member p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .card {
+            margin-bottom: 30px;
+        }
+        /* Ensures team section remains responsive */
+        .row-centered {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .col-centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+            /* Awards Section Styling */
+.awards-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.awards-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.award {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.award img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire space without distortion */
+    margin-bottom: 20px;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.award h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.award p {
+    font-size: 16px;
+}
+
+    /* Footer Section Styling */
+.footer-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-top: 5px solid #007bff; /* Optional border at the top */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Social Icons */
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>About Us</h1>
-    </div>    
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="/mnt/data/image.png" alt="Pinnacle Logo" style="max-height: 40px;"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="search-icon">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Who We Are</h1>
+            <p class="highlight">Over 20 Years of Experience in the Singapore Market</p>
+            <p class="highlight">Led by a team of Certified Accountants and Financial Experts</p>
+            <p class="highlight">Recognized for our integration of AI and cloud-based accounting solutions</p>
+            <p class="highlight">Offering a full suite of financial services tailored to SMEs, Corporations, and Startups</p>
+            <a href="#" class="btn-discover-more">Discover More</a>
+        </div>
+    </div>
+
+    <!-- Our Team Section -->
+    <div class="team-section">
+        <h2>Our Team</h2>
+        <div class="container">
+            <div class="row row-centered">
+                <!-- Team Member 1 -->
+                <div class="col-sm-4 col-centered">
+                    <div class="team-member card">
+                        <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/Johnny T.png" alt="Johnny Tan">
+                        <h3>Johnny Tan</h3>
+                        <p>Chairman</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-sm-4 col-centered">
+                    <div class="team-member card">
+                        <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/Jane S.png" alt="Jane Smith">
+                        <h3>Jane Smith</h3>
+                        <p>Partner, Head of Tax</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-sm-4 col-centered">
+                    <div class="team-member card">
+                        <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/Kenny L.png" alt="Kenny Lim">
+                        <h3>Kenny Lim</h3>
+                        <p>Partner, Head of Audit</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-centered">
+                <!-- Team Member 4 -->
+                <div class="col-sm-4 col-centered">
+                    <div class="team-member card">
+                        <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/Angeline T.png" alt="Angeline Tay">
+                        <h3>Angeline Tay</h3>
+                        <p>Partner, Head of Consulting</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="col-sm-4 col-centered">
+                    <div class="team-member card">
+                        <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/Joshua G.png" alt="Joshua Goh">
+                        <h3>Joshua Goh</h3>
+                        <p>Senior Partner, Fund Administration</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="col-sm-4 col-centered">
+                    <div class="team-member card">
+                        <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/Anthony B.png" alt="Anthony Bourdain">
+                        <h3>Anthony Bourdain</h3>
+                        <p>Partner, Business Enablement</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Awards Section -->
+    <div class="awards-section">
+      <h2>Awards & Recognition</h2>
+      <div class="container">
+          <div class="row">
+              <!-- Award 1 -->
+              <div class="col-sm-4">
+                  <div class="award">
+                      <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/award1.png" alt="" class="award-image">
+                      <h3>Singapore Accountancy Awards 2018</h3>
+                      <p>This acknowledgment demonstrates our commitment to quality growth and lasting value for clients while ensuring high-quality services through team investments and upholding professional standards.</p>
+                  </div>
+              </div>
+              <!-- Award 2 -->
+              <div class="col-sm-4">
+                  <div class="award">
+                      <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/award2.png" alt="" class="award-image">
+                      <h3>Singapore Tax Advisory Firm of the Year 2023</h3>
+                      <p>These awards reflect Pinnacle Accountants 's leadership and excellence in tax, underscoring its commitment to delivering high-quality tax solutions..</p>
+                  </div>
+              </div>
+              <!-- Award 3 -->
+              <div class="col-sm-4">
+                  <div class="award">
+                      <img src="W0ShiiSky/CS2024-3-Page-HTML-Project/images/award3.png" alt="" class="award-image">
+                      <h3>Global 500 2022 ranking</h3>
+                      <p>Recognized as one of the Top 500 Most corporations worldwide, as published annually by Fortune magazine.</p>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+  </div>
+
+ <!-- Footer Section -->
+<footer class="footer-section">
+  <div class="container">
+      <div class="row">
+          <!-- Social Icons -->
+          <div class="col-sm-3">
+              <ul class="social-icons">
+                  <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+          </div>
+          <!-- Services Column -->
+          <div class="col-sm-3">
+              <h4>Services</h4>
+              <ul class="footer-links">
+                  <li><a href="#">Accounting</a></li>
+                  <li><a href="#">Auditing</a></li>
+                  <li><a href="#">Consulting</a></li>
+                  <li><a href="#">Corporate Secretarial Services</a></li>
+                  <li><a href="#">Enterprise</a></li>
+                  <li><a href="#">Sustainability</a></li>
+                  <li><a href="#">Tax</a></li>
+              </ul>
+          </div>
+          <!-- Insights Column -->
+          <div class="col-sm-3">
+              <h4>Insights</h4>
+              <ul class="footer-links">
+                  <li><a href="#">Consumer Products</a></li>
+                  <li><a href="#">Financial Services</a></li>
+                  <li><a href="#">Government & Infrastructure</a></li>
+                  <li><a href="#">Private Equity</a></li>
+                  <li><a href="#">Technology</a></li>
+              </ul>
+          </div>
+          <!-- About Us Column -->
+          <div class="col-sm-3">
+              <h4>About Us</h4>
+              <ul class="footer-links">
+                  <li><a href="#">Company Overview</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Awards & Recognition</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+    </div>
+
 </body>
 </html>
