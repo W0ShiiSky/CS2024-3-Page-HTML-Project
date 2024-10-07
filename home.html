@@ -1,16 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>CS2024 HTML Assignment</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class="container-fluid">
-        <h1>Home Page</h1>
-    </div>    
+    <!-- Nav Bar Section -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header" style="margin-left: 20px;">
+            <a class="navbar-brand" style="color: black; font-size: 14px; font-weight: bold;" href="home.html">Pinnacle Accountants LLP</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 20px;">
+            <li><a style="color: black; font-size: 14px; font-weight: bold;" href="#">Services</a></li>
+            <li><a style="color: black; font-size: 14px; font-weight: bold;" href="#">Insights</a></li>
+            <li><a style="color: black; font-size: 14px; font-weight: bold;" href="aboutUs.html">About Us</a></li>
+            <li><a style="color: black; font-size: 14px; font-weight: bold;" href="contactus.html">Contact Us</a></li>
+            <li>
+                <button class="btn navbar-btn" style="line-height: 35px; background-color: transparent;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Header Image Section -->
+    <div class="header-section">
+        <img src="https://www.netguru.com/hs-fs/hubfs/business%20documents%20on%20office%20table%20with%20smart%20phone%20and%20laptop%20computer%20and%20graph%20financial%20with%20social%20network%20diagram%20and%20three%20colleagues%20discussing%20data%20in%20the%20background-Aug-09-2023-10-45-00-9565-AM.jpeg?width=1000&height=667&name=business%20documents%20on%20office%20table%20with%20smart%20phone%20and%20laptop%20computer%20and%20graph%20financial%20with%20social%20network%20diagram%20and%20three%20colleagues%20discussing%20data%20in%20the%20background-Aug-09-2023-10-45-00-9565-AM.jpeg" alt="Header Image" class="header-image">
+        <div class="header-text">
+            <h1>Your Trusted Partner in Accounting & Financial Advisory</h1>
+            <h4>Specializing in Accounting, Taxation, and Corporate Advisory for SMEs and Corporations in Singapore</h4>
+            <button>Get a Free Consultation</button>
+        </div>
+    </div>
+
+    <!-- About Us Overview Section -->
+    <section class="about-overview">
+        <div class="container">
+            <h2>About Pinnacle Accountants LLP</h2>
+            <p>With over 20 years of experience, Pinnacle Accountants LLP specializes in accounting, taxation, and corporate advisory services for Singapore-based SMEs and corporations. Our cloud-based solutions ensure clients have real-time access to financial data, driving better business decisions.</p>
+            <a href="aboutUs.html" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    
+
+    <!-- Services Overview Section -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="text-center" style="font-weight: bold;">Our Services</h2>
+            <p class="text-center" style="font-size: 16px;">We offer a full range of accounting, taxation, auditing, and advisory services to meet your business needs.</p>
+            <div class="row">
+                <!-- Accounting Services -->
+                <div class="col-md-6 service-item">
+                    <i class="fas fa-calculator service-icon"></i>
+                    <h4>Accounting Services</h4>
+                    <p>We provide bookkeeping, payroll management, and financial reporting to ensure your business runs smoothly.</p>
+                </div>
+                <!-- Taxation Services -->
+                <div class="col-md-6 service-item">
+                    <i class="fas fa-file-invoice-dollar service-icon"></i>
+                    <h4>Taxation Services</h4>
+                    <p>Our tax experts help with tax planning and compliance to ensure you meet Singapore tax regulations (IRAS).</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Auditing & Corporate Secretarial Services -->
+                <div class="col-md-6 service-item">
+                    <i class="fas fa-check-circle service-icon"></i>
+                    <h4>Auditing & Corporate Secretarial Services</h4>
+                    <p>We offer auditing services to meet corporate governance standards and corporate secretarial support for compliance with ACRA.</p>
+                </div>
+                <!-- Advisory Services -->
+                <div class="col-md-6 service-item">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h4>Advisory Services</h4>
+                    <p>Our team assists with financial risk management, strategy development, and compliance to help your business thrive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 style="font-weight: bold">What Our Clients Say</h2>
+            <div class="row">
+                
+                <!-- Testimonial 1 -->
+                <div class="col-md-6">
+                    <div class="testimonial-box">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <!-- Client Logo -->
+                                <img src="images/microsoft-logo2.jpg" alt="Microsoft Logo" class="client-logo">
+                            </div>
+                            <div class="col-xs-9">
+                                <p>"Pinnacle Accountants LLP has been instrumental in helping us maintain compliance and stay ahead of deadlines. Their tax planning and advisory services have significantly improved our financial strategy."</p>
+                                <h5>Microsoft</h5>
+                                <button class="btn btn-primary">Let’s Talk</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-md-6">
+                    <div class="testimonial-box">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <!-- Client Logo -->
+                                <img src="images/amazon-logo.png" alt="Amazon Logo" class="client-logo">
+                            </div>
+                            <div class="col-xs-9">
+                                <p>"The team at Pinnacle Accountants LLP is highly professional and responsive. Their attention to detail and expertise have helped our business navigate complex regulatory requirements with ease."</p>
+                                <h5>Amazon</h5>
+                                <button class="btn btn-primary">Let’s Talk</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+
+            <!-- Key Differentiators -->
+            <div class="row">
+                <!-- Certified Accountants & Advisors -->
+                <div class="col-md-3 differentiator-box">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Certified Accountants & Advisors</h4>
+                    <p>Our team consists of certified accountants and financial advisors with expertise in the Singapore market.</p>
+                </div>
+
+                <!-- Tailored Financial Solutions -->
+                <div class="col-md-3 differentiator-box">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Tailored Financial Solutions</h4>
+                    <p>We provide personalized financial advice tailored to meet the unique needs of your business.</p>
+                </div>
+
+                <!-- Cloud-Based Accounting -->
+                <div class="col-md-3 differentiator-box">
+                    <i class="fas fa-cloud"></i>
+                    <h4>Cloud-Based Accounting</h4>
+                    <p>Benefit from real-time access to your financial data and insights through our cloud-based solutions.</p>
+                </div>
+
+                <!-- 20 Years of Expertise -->
+                <div class="col-md-3 differentiator-box">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Over 20 Years of Expertise</h4>
+                    <p>With over two decades of experience, we help businesses navigate the complexities of Singapore’s regulatory environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Free Consultation Section -->
+                <div class="col-md-6">
+                    <div class="cta-box consultation-box">
+                        <h2>Get Your Free Consultation</h2>
+                        <p>Take the first step towards better financial management. Contact us today for a free consultation with our expert advisors.</p>
+                        <a href="contactus.html" class="btn btn-primary">Request a Consultation</a>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Sign-Up Section -->
+                <div class="col-md-6">
+                    <div class="cta-box newsletter-box">
+                        <h2>Subscribe to Our Newsletter</h2>
+                        <p>Stay updated on the latest in financial management, tax planning, and regulatory changes. Sign up for our newsletter.</p>
+                        <form action="#" method="post" class="newsletter-form">
+                            <input style="margin-top: 15px;"   type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Logos or Affiliations Section -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 style="font-weight: bold; text-align: center;">Our Partners & Affiliations</h2>
+            <div class="row justify-content-center" style="margin-left: 360px;">
+                
+                <!-- Partner 1 (ACRA Logo) -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="partner-logo">
+                        <a href="https://www.acra.gov.sg/"><img src="images/acra-logo.png" alt="ACRA" class="img-fluid"></a>
+                    </div>
+                </div>
+                
+                <!-- Partner 2 (IRAS Logo) -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="partner-logo">
+                        <a href="https://www.iras.gov.sg/"><img src="images/IRAS-logo.jpg" alt="IRAS" class="img-fluid"></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Logo and Social Media Links -->
+                <div class="col-md-3">
+                    <h4 style="font-weight: bold;">Follow Us</h4>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="col-md-2">
+                    <h4 style="font-weight: bold;">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Accounting</a></li>
+                        <li><a href="#">Auditing</a></li>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Corporate Secretarial Services</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Tax</a></li>
+                    </ul>
+                </div>
+
+                <!-- Insights Links -->
+                <div class="col-md-2">
+                    <h4 style="font-weight: bold;">Insights</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Consumer Products</a></li>
+                        <li><a href="#">Financial Services</a></li>
+                        <li><a href="#">Government & Infrastructure</a></li>
+                        <li><a href="#">Private Equity</a></li>
+                        <li><a href="#">Technology</a></li>
+                    </ul>
+                </div>
+
+                <!-- About Us Links -->
+                <div class="col-md-2">
+                    <h4 style="font-weight: bold;">About Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Company Overview</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Awards & Recognition</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h4 style="font-weight: bold;">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Services</a></li>
+                        <li><a href="#" class="text-white">Insights</a></li>
+                        <li><a href="aboutUs.html" class="text-white">About Us</a></li>
+                        <li><a href="contactus.html" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
 </body>
 </html>
