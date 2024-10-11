@@ -1,4 +1,83 @@
 /* Header Navigation Styling */
+nav-left-adjust {
+    margin-left: 20px;
+}
+
+.navbar {
+    background-color: #f8f8f8;
+    height: 70px;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    height: 70px;
+}
+
+.navbar-header, .navbar-nav > li > a {
+    height: 70px;
+    line-height: 35px;
+}
+
+.navbar-brand {
+    line-height: 35px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.header-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text h4 {
+    font-size: 24px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text button {
+    background-color: #e0e0e0; 
+    color: #333333;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
 .navbar {
     margin-bottom: 0;
     background-color: #f8f9fa;
@@ -327,7 +406,6 @@
 
 /* Social Icon Links */
 .social-icons a {
-    color: white;
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for color */
@@ -412,38 +490,6 @@
     font-size: 16px;
 }
 
-.footer-section {
-    background-color: #f8f8f8;
-    padding: 40px 0;
-    color: #333;
-    font-size: 14px;
-}
-
-.footer-logo {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
-.social-icons {
-    padding: 0;
-    list-style: none;
-}
-
-.social-icons li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons a {
-    color: #333;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #007bff;
-}
-
 /* CTA Section Styling */
 .cta-section {
     background-color: #007bff;
@@ -479,6 +525,44 @@
     color: white;
 }
 
+
+.footer-section .social-icons {
+    margin-top: 20px;
+    margin-left: 10px; /* Change margin-right to margin-left */
+    display: flex; /* Ensure proper alignment */
+    justify-content: flex-start; /* Align the icons to the left */
+}
+.footer-section {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
 
 .footer-links {
     list-style: none;
