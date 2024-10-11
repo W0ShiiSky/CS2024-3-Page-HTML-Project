@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+  
+    
 
-    <!-- Nav Bar Section -->
+      <!-- Nav Bar Section -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header" style="margin-left: 20px; display: flex; align-items: center;">
@@ -40,29 +43,100 @@
 
 <!-- Header Image Section -->
 <div class="hero-section">
-    <img src="images/companyoverview.jpg" alt="Header Image" class="header-image">
-    <div class="hero-content">
-        <h1>Who We Are</h1>
-        <p class="highlight">Over 20 Years of Experience in the Singapore Market</p>
-        <p class="highlight">Led by a team of Certified Accountants and Financial Experts</p>
-        <p class="highlight">Recognized for our integration of AI and cloud-based accounting solutions</p>
-        <p class="highlight">Offering a full suite of financial services tailored to SMEs, Corporations, and Startups</p>
+    <div class="background-text">PINNACLE</div>
+    
+    <div class="left-column">
+        <p class="intro-text">
+            <span class="first-letter">P</span>innacle Accountants LLP, with over 20 years of experience in the Singapore market, stands out with our team of Certified Accountants and Financial Experts. We are known for seamlessly integrating AI and cloud-based accounting solutions, providing a comprehensive range of financial services customized for SMEs, corporations, and startups.
+        </p>
         <button class="btn-discover-more">Discover More</button>
+    </div>
+
+    <div class="right-column">
+        <div class="status-bars">
+            <div class="status-bar">
+                <span class="status-label">Audit Success Rate</span>
+                <div class="status-fill-container">
+                    <div class="status-fill" data-percentage="100"></div>
+                    <span class="percentage-label">100%</span>
+                </div>
+            </div>
+            <div class="status-bar">
+                <span class="status-label">Savings Achieved for Clients</span>
+                <div class="status-fill-container">
+                    <div class="status-fill" data-percentage="90"></div>
+                    <span class="percentage-label">90%</span>
+                </div>
+            </div>
+            <div class="status-bar">
+                <span class="status-label">Client Retention Rate</span>
+                <div class="status-fill-container">
+                    <div class="status-fill" data-percentage="97"></div>
+                    <span class="percentage-label">97%</span>
+                </div>
+            </div>
+            <div class="status-bar">
+                <span class="status-label">Client Satisfaction Rating</span>
+                <div class="status-fill-container">
+                    <div class="status-fill" data-percentage="100"></div>
+                    <span class="percentage-label">100%</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const fills = document.querySelectorAll(".status-fill");
 
-    <!-- Our Team Section -->
+    fills.forEach(fill => {
+        const percentage = fill.getAttribute("data-percentage");
+        fill.style.width = '0'; // Start from 0%
+        
+        setTimeout(() => {
+            fill.style.width = `${percentage}%`;
+        }, 100); // Delay of 100ms
+    });
+});
+
+</script>
+
+<!-- Vision Section -->
+<div class="vision-section">
+    <!-- Left Column: Vision Statement -->
+    <div class="col-left">
+        <h2>The Best Choice for Every Financial Question You Have</h2>
+        <p>At Pinnacle Accountants LLP, our vision is to redefine the financial landscape through innovation and integrity. We strive to empower businesses with the clarity and confidence needed to achieve their financial goals.</p>
+        <p>We undertake projects with precision, ensuring that every financial aspect is meticulously managed and optimized for success. Our strategic financial planning services are tailored to meet the unique needs of each client, providing a roadmap for sustainable growth. We are committed to excellence in performance, leveraging our expertise to deliver measurable financial improvements for our clients.</p>
+        <button class="btn-discover-more">Contact Us</button>
+    </div>
+    <!-- Right Column: Chairman's Picture and Name -->
+    <div class="col-right">
+        <img src="images/Johnny T.jpg" alt="Chairman" class="chairman-pic">
+        <p class="signature">Johnny Tan</p>
+        <p class="chairman-title">Chairman of Pinnacle Accountants LLP</p>
+    </div>
+</div>
+
+    
+    <!-- Team Section with Hover Effects -->
     <div class="team-section">
-        <h2>Our Team</h2>
+        <h2>Our Expertise</h2>
         <div class="container">
             <div class="row row-centered">
                 <!-- Team Member 1 -->
                 <div class="col-sm-4 col-centered">
                     <div class="team-member card">
-                        <img src="images/Johnny T.png" alt="Johnny Tan">
-                        <h3>Johnny Tan</h3>
-                        <p>Chairman</p>
+                        <div class="profile-pic-container">
+                            <img src="images/James L.png" alt="James Lim">
+                            <div class="social-icons">
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h3>James Lim</h3>
+                        <p>Senior Partner, Head of Deal Advisory</p>
                         <a href="#" class="btn btn-primary">View Profile</a>
                     </div>
                 </div>
@@ -72,6 +146,10 @@
                         <img src="images/Jane S.png" alt="Jane Smith">
                         <h3>Jane Smith</h3>
                         <p>Partner, Head of Tax</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                         <a href="#" class="btn btn-primary">View Profile</a>
                     </div>
                 </div>
@@ -81,6 +159,10 @@
                         <img src="images/Kenny L.png" alt="Kenny Lim">
                         <h3>Kenny Lim</h3>
                         <p>Partner, Head of Audit</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                         <a href="#" class="btn btn-primary">View Profile</a>
                     </div>
                 </div>
@@ -92,6 +174,10 @@
                         <img src="images/Angeline T.png" alt="Angeline Tay">
                         <h3>Angeline Tay</h3>
                         <p>Partner, Head of Consulting</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                         <a href="#" class="btn btn-primary">View Profile</a>
                     </div>
                 </div>
@@ -101,6 +187,10 @@
                         <img src="images/Joshua G.png" alt="Joshua Goh">
                         <h3>Joshua Goh</h3>
                         <p>Senior Partner, Fund Administration</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                         <a href="#" class="btn btn-primary">View Profile</a>
                     </div>
                 </div>
@@ -110,11 +200,16 @@
                         <img src="images/Anthony B.png" alt="Anthony Bourdain">
                         <h3>Anthony Bourdain</h3>
                         <p>Partner, Business Enablement</p>
+                                                <div class="social-icons">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                         <a href="#" class="btn btn-primary">View Profile</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
             <!-- Awards Section -->
     <div class="awards-section">
@@ -149,6 +244,16 @@
           </div>
       </div>
   </div>
+
+  <!-- Call to Action Section -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>Stay compliant and ahead of the curve with Pinnacle’s real-time cloud-based tools</h2>
+        <p>Unlock financial success with tailored strategies and dedicated experts at your side. Let’s make your financial dreams a reality today!</p>
+        <button class="btn-cta">Get Started</button>
+    </div>
+</section>
+
 
 
     <!-- Footer Section -->
