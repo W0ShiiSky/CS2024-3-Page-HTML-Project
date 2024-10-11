@@ -387,12 +387,12 @@ body {
 }
 
 /* Social Icons Styling */
-.social-icons {
+.social-icons-teams {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: none; /* Hide the icons initially */
     gap: 10px;
     opacity: 0;
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
@@ -400,19 +400,21 @@ body {
 }
 
 /* Show Icons on Hover */
-.team-member:hover .social-icons {
+.team-member:hover .social-icons-teams {
+    display: flex; /* Make the icons visible on hover */
     opacity: 1;
 }
 
 /* Social Icon Links */
-.social-icons a {
+.social-icons-teams a {
     font-size: 24px;
+    color: #333;
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for color */
 }
 
 /* Change icon color on hover */
-.social-icons a:hover {
+.social-icons-teams a:hover {
     color: #007bff; 
 }
 
@@ -429,6 +431,7 @@ body {
 }
 
 
+
 /* Card Styling */
 .card {
     margin-bottom: 30px;
@@ -440,19 +443,6 @@ body {
     margin-top: 10px;
 }
 
-/* Ensures team section remains responsive */
-.row-centered {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.col-centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
 
 /* Awards Section Styling */
 .awards-section {
@@ -525,13 +515,6 @@ body {
     color: white;
 }
 
-
-.footer-section .social-icons {
-    margin-top: 20px;
-    margin-left: 10px; /* Change margin-right to margin-left */
-    display: flex; /* Ensure proper alignment */
-    justify-content: flex-start; /* Align the icons to the left */
-}
 .footer-section {
     background-color: #f8f8f8;
     padding: 40px 0;
