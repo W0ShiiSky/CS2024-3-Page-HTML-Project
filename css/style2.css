@@ -1,5 +1,5 @@
 /* Header Navigation Styling */
-nav-left-adjust {
+.nav-left-adjust {
     margin-left: 20px;
 }
 
@@ -78,21 +78,7 @@ body {
     cursor: pointer;
     border-radius: 20px;
 }
-.navbar {
-    margin-bottom: 0;
-    background-color: #f8f9fa;
-    padding: 15px 20px; /* Add padding for better layout */
-}
 
-.navbar-nav li a {
-    color: #000;
-    font-weight: bold;
-    padding: 10px 15px; /* Add padding for better click area */
-}
-
-.navbar-nav li a:hover {
-    color: #007bff; /* Add hover effect for links */
-}
 
 /* Main Blue Color */
 :root {
@@ -514,6 +500,98 @@ body {
     background-color: #0056b3;
     color: white;
 }
+
+.contact-title {
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.contact-title h2, .contact-title p {
+    color: black; 
+    margin: 10px 0; 
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Full-width background for 'Send Us a Message' title */
+.form-title h3 {
+    position: relative;
+    font-weight: bold;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1;
+    background-color: #007bff;
+    margin: 0;
+}
+
+.message-form {
+    text-align: center;
+}
+
+.map-section img {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 600px; 
+    height: 300px; 
+    object-fit: cover; 
+}
+
+.map-section iframe {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; 
+    height: 300px; 
+}
+
+.form-section {
+    background-color: #007bff; 
+    padding: 50px 0; 
+}
+
+.form-section form {
+    margin: 0 auto;
+    width: 50%;
+    background-color: white; /* Form background */
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 10px; /* Rounded corners for the form */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #004099;
+}
+
+
 
 .footer-section {
     background-color: #f8f8f8;

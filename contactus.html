@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <!-- Nav Bar Section -->
@@ -37,58 +38,146 @@
         </div>
     </nav>
 
-    <!-- Contact Us Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="text-center" style="font-weight: bold;">Contact Us</h2>
-            <div class="row">
-                <!-- Contact Information -->
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p><strong>Address:</strong> 123 Business St., Singapore</p>
-                        <p><strong>Phone:</strong> +65 1234 5678</p>
-                        <p><strong>Email:</strong> info@pinnacleaccountants.sg</p>
-                        <p><strong>Business Hours:</strong> Monday to Friday, 9 AM - 6 PM</p>
-                    </div>
-                </div>
-                
-                <!-- Contact Form -->
-                <div class="col-md-6">
-                    <h3>Send Us a Message</h3>
-                    <form action="#" method="post" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="5" placeholder="Your Message" class="form-control"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+   <!-- Contact Us Section -->
+<section class="contact-section">
+    <div class="container">
+        <!-- Contact Us Title -->
+        <div class="contact-title">
+            <h2 style="font-weight: bold;">Contact Us</h2>
+            <p>If you require urgent assistance or have critical compliance deadlines approaching, reach out to us using the contact information provided below.We are here to help with all your accounting and compliance needs.</p>
+        </div>
+        
+        <!-- Contact Information and Map Section -->
+        <div class="row">
+            <!-- Contact Information with Icons -->
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h3>Reach to us Now</h3>
+                    <p><i class="fas fa-map-marker-alt"></i><strong> Address:</strong> 123 Business St., Singapore</p>
+                    <p><i class="fas fa-phone"></i><strong> Phone:</strong> +65 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i><strong> Email:</strong> info@pinnacleaccountants.sg</p>
+                    <p><i class="fas fa-clock"></i><strong> Business Hours:</strong> Monday to Friday, 9 AM - 6 PM</p>
                 </div>
             </div>
 
-            <!-- Google Map -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Our Location</h3>
-                    <iframe src="https://maps.google.com/?q=123+Business+St,+Singapore&output=embed" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+            <!-- Right-Side Section (Images and Map) -->
+            <div class="col-md-6">
+                <div class="map-section">
+                    <!-- Additional Image (Office) -->
+                    <img src="images/companylocation.jpg" alt="companylocation">
+                    <!-- Map -->
+                    <iframe src="https://maps.google.com/?q=123+Business+St,+Singapore&output=embed" frameborder="0" style="border:0;" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </section>
-     
+    </div>
+</section>
 
+
+<!-- Send Us a Message Section -->
+<section class="form-section">
+    <div class="form-title">
+        <h3>Let's Get in Touch and Make Things Happen!</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form action="#" method="post" class="contact-form">
+                
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" placeholder="Your Name" class="form-control" required>
+                </div>
+
+                <!-- Preferred Contact Method Radio Buttons -->
+                <div class="form-group">
+                    <label>Preferred Contact Method</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contact_method" value="email" onclick="toggleContactMethod('email')" required> Email</label>
+                        <label><input type="radio" name="contact_method" value="phone" onclick="toggleContactMethod('phone')" required> Phone</label>
+                    </div>
+                </div>
+
+                <!-- Email or Phone Input -->
+                <div id="email-field" class="form-group hidden">
+                    <input type="email" name="email" placeholder="Your Email" class="form-control">
+                </div>
+                <div id="phone-field" class="form-group hidden">
+                    <input type="tel" name="phone" placeholder="Your Phone" class="form-control">
+                </div>
+
+                <!-- Title of Message Dropdown (Subject) -->
+                <div class="form-group">
+                    <label for="title">Field of service</label>
+                    <select name="title" class="form-select" required>
+                        <option value="" disabled selected>Select Field</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="auditing">Auditing</option>
+                        <option value="consulting">Consulting</option>
+                        <option value="Corporate Secretarial Services">Corporate Secretarial Services</option>
+                        <option value="enterprise">Enterprise</option>
+                        <option value="Sustainability">Sustainability</option>
+                        <option value="Tax">Tax</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea name="message" rows="5" placeholder="Your Message" class="form-control" required></textarea>
+                </div>
+
+                <!-- Urgency Level Radio Buttons -->
+                <div class="form-group">
+                    <label>Urgency Level</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="urgency" value="normal" required> Normal</label>
+                        <label><input type="radio" name="urgency" value="urgent" required> Urgent</label>
+                    </div>
+                </div>
+
+                <!-- Budget Level Dropdown -->
+                <div class="form-group">
+                    <label for="budget">Budget Level</label>
+                    <select name="budget" class="form-select" required>
+                        <option value="" disabled selected>Select Budget Level</option>
+                        <option value="low">Low Budget</option>
+                        <option value="medium">Medium Budget</option>
+                        <option value="high">High Budget</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Let’s Connect</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript to Toggle Email/Phone Input -->
+<script>
+    function toggleContactMethod(method) {
+        var emailField = document.getElementById('email-field');
+        var phoneField = document.getElementById('phone-field');
+
+        if (method === 'email') {
+            emailField.classList.remove('hidden');
+            phoneField.classList.add('hidden');
+        } else {
+            emailField.classList.add('hidden');
+            phoneField.classList.remove('hidden');
+        }
+    }
+</script>
+
+
+
+
+    <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
-                
                 <!-- Logo and Social Media Links -->
                 <div class="col-md-3">
                     <h4 style="font-weight: bold;">Follow Us</h4>
@@ -147,11 +236,8 @@
                         <li><a href="contactus.html" class="text-white">Contact Us</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </footer>
-        
-        
 </body>
 </html>
