@@ -1,127 +1,223 @@
-.nav-left-adjust {
-    margin-left: 20px;
-}
-
-.navbar {
-    background-color: #f8f8f8;
-    height: 70px;
-}
-
-.navbar-default {
-    background-color: #f8f8f8;
-    height: 70px;
-}
-
-.navbar-header, .navbar-nav > li > a {
-    height: 70px;
-    line-height: 35px;
-}
-
-.navbar-brand {
-    line-height: 35px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Navbar adjustments for logo and alignment */
 .navbar {
-    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: none;
+    background-color: transparent;
 }
 
-.header-section {
-    position: relative;
-    text-align: center;
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav > li > a {
     color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 15px;
 }
 
-.header-image {
+.navbar-nav > li > a:hover {
+    color: #007bff;
+}
+
+/* Banner Section */
+/* Banner Section with Sliced Effect */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 750px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.banner-img {
     width: 100%;
     height: auto;
-    max-height: 600px;
+    max-height: 1200px;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
-.header-text {
+/* Blue Overlay for both navbar and banner */
+.blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 31, 63, 0.7); /* Blue overlay with transparency */
+    z-index: 2; /* Make sure the overlay is above the image */
+}
+
+
+.banner-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 10px;
+    z-index: 4; /* Ensure text is on top of the overlay and slice */
 }
 
-.header-text h1 {
+.banner-text h1 {
     font-size: 48px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.header-text h4 {
-    font-size: 24px;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.banner-text p {
+    font-size: 18px;
 }
 
-.header-text button {
-    background-color: #e0e0e0; 
-    color: #333333;
+.banner-text button {
+    background-color: #007bff; 
+    color: white;
     border: none;
     padding: 15px 30px;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
     border-radius: 20px;
+} 
+
+
+/* About Section Styling */
+.about-section {
+    background-color: #007bff; /* Blue background */
+    padding: 100px 0; /* Space around the section */
+    color: white; /* Text color */
 }
 
-.about-overview {
-    background-color: #f9f9f9; /* Light grey background for contrast */
-    padding: 50px 0; /* Adds spacing around the section */
-    text-align: center;
+/* Flexbox for alignment */
+.about-container {
+    display: flex;
+    align-items: center;
 }
 
-.about-overview h2 {
-    font-size: 32px;
+/* Image styling */
+.about-image img {
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+}
+
+/* Text styling */
+.about-text {
+    padding-left: 30px; /* Space between image and text */
+}
+
+.about-text .section-label {
+    margin-bottom: 10px;
+}
+
+.about-text .section-label .label-text {
+    background-color: #e8f0ff; /* Light blue background for the label */
+    color: #007bff; /* Blue text color */
+    /* padding: 5px 15px; */
+    border-radius: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 20px; 
-    color: #333; 
 }
 
-.about-overview p {
+.about-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text p {
     font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    max-width: 800px; 
-    margin: 0 auto 30px; 
+    margin-bottom: 20px;
 }
 
-.about-overview .btn {
-    background-color: #007bff; 
-    color: white; 
+/* List items */
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-text ul li::before {
+    content: "•";
+    color: white; /* Use white for the bullets */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Button Styling */
+.about-text .btn-primary {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    border-radius: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-.about-overview .btn:hover {
-    background-color: #0056b3; 
+.about-text .btn-primary:hover {
+    background-color: #f1f1f1;
 }
 
 
-.services-text {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto 30px;
+
+
+.section-label {
+    text-align: center;
+    margin-bottom: 10px; /* Space between the label and heading */
+    margin-top: 40px
 }
 
-.services-overview {
-    padding: 50px 0;
-    background-color: #ffffff;
+.section-label .label-text {
+    background-color: #e8f0ff; /* Light blue background */
+    color: #007bff; /* Blue text color */
+    padding: 5px 15px;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px;
+    text-transform: uppercase; /* Make the text uppercase */
+    font-weight: bold;
+}
+
+/* Main section title */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Paragraph text under the title */
+.services-overview p {
+    color: #777;
+    margin-bottom: 40px;
+    font-size: 16px;
 }
 
 .services-overview h2 {
@@ -135,70 +231,222 @@ body {
     margin-bottom: 40px;
 }
 
-.service-item {
+/* Services Grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.service-item .service-icon {
+/* Service Cards */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.service-card i {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+.service-card h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
+/* 2x2 Grid Layout for larger screens */
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 48%; /* 2 columns with some spacing */
+        max-width: 48%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Single column on small screens */
+@media (max-width: 767px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Testimonials Section */
+.testimonials-section {
+    position: relative;
+    padding: 60px 0;
+    color: white;
+    text-align: left;
+}
+
+/* Background Image */
+.testimonials-section .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Blue Overlay */
+.testimonials-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 31, 63, 0.7); /* Blue overlay with transparency */    
+    z-index: 1;
+}
+
+/* Ensure content appears on top of overlay */
+.testimonials-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Testimonial Cards */
+.testimonials-box .testimonial-card {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background for cards */
+    border: 1px solid white;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonial Text Styling */
+.testimonial-header h4,
+.testimonial-text {
+    color: white;
+}
+
+/* Center Logo in Testimonial Card */
+.testimonial-header {
+    display: flex;
+    flex-direction: column; /* Aligns content in a column */
+    align-items: center; /* Centers horizontally */
+    margin-bottom: 15px;
+}
+
+/* Logo Adjustments */
+.testimonial-header img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-box {
+        display: block;
+        flex-direction: column;
+    }
+    .testimonial-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* Why Us Section */
+.why-us-section {
+    padding: 60px 0;
+}
+
+/* Section label */
+.section-label {
+    margin-bottom: 15px;
+}
+
+.section-label .label-text {
+    background-color: #e8f0ff; /* Light blue background */
+    color: #007bff; /* Blue text */
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Section title */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Feature boxes */
+.feature-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-icon {
     font-size: 40px;
     color: #007bff;
     margin-bottom: 15px;
 }
 
-.service-item h4 {
-    font-size: 24px;
-    color: #333;
+.feature-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.service-item p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-
-.testimonials-section {
-    padding: 40px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.testimonials-section h2 {
-font-size: 30px;
-margin-bottom: 30px;
-color: #333;
-}
-
-.client-logo {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.testimonial-box {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.testimonial-box h5 {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.testimonial-box p {
+.feature-box p {
     font-size: 14px;
-    line-height: 1.6;
+    color: #666;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    margin-top: 10px;
+/* Align the text and grid in two columns */
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .align-items-center {
+        display: block;
+    }
+    .why-us-text {
+        margin-bottom: 30px;
+    }
+}
+
+
+
 
 
 .why-choose-us {
@@ -285,6 +533,8 @@ color: #333;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    border-radius: 20px;
+    background-color: #007bff;
 }
 
 .newsletter-form {
@@ -304,33 +554,60 @@ color: #333;
     font-size: 16px;
 }
 
+/* #007bff */
+
 .partners-section {
-    padding: 40px 0;
-    background-color: #ffffff;
+    background-color: #007bff; /* Bright blue background */
+    padding: 60px 0;
     text-align: center;
 }
 
-.partners-section h2 {
-    margin-bottom: 30px;
+.section-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.partners-logo-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .partner-logo {
-    padding: 20px;
-    text-align: center;
-}
-
-.partner-logo img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* White circle background */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Optional: subtle border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
 }
 
 .partner-logo img {
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%;
-    object-fit: contain; 
+    max-width: 80%;
+    max-height: 70%;
+    object-fit: contain; /* Ensures the logo fits without distortion */
     padding: 10px;
-    border: 2px solid #f0f0f0;
+    transition: transform 0.3s;
 }
+
+.partner-logo img:hover {
+    transform: scale(1.1);
+}
+
+
 
 
 .footer-section {

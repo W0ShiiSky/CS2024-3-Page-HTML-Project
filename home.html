@@ -13,24 +13,26 @@
 </head>
 
 <body>
+
     <!-- Nav Bar Section -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="background-color: transparent; border: none;">
         <div class="container-fluid">
-            <div class="navbar-header" style="margin-left: 20px; display: flex; align-items: center;">
-                <a href="home.html">
+            <!-- Logo and Company Name -->
+            <div class="navbar-header" style="display: flex; align-items: center; margin-top: 20px; margin-left: 20px;">
+                <a href="home.html" class="navbar-brand" style="display: flex; align-items: center;">
                     <img src="images/PinnacleAccount.ico" alt="Pinnacle Logo" style="height: 50px; margin-right: 10px;">
-                </a>
-                <a href="home.html" style="font-size: 16px; font-weight: bold; color: black; text-decoration: none;">
-                    Pinnacle Accountants LLP
+                    <span style="font-size: 16px; font-weight: bold; color: white;">Pinnacle Accountants LLP</span>
                 </a>
             </div>
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 20px;">
-                <li><a style="color: black; font-size: 14px; font-weight: bold;" href="aboutUs.html">About Us</a></li>
-                <li><a style="color: black; font-size: 14px; font-weight: bold;" href="#">Services</a></li>
-                <li><a style="color: black; font-size: 14px; font-weight: bold;" href="#">Insights</a></li>
-                <li><a style="color: black; font-size: 14px; font-weight: bold;" href="contactus.html">Contact Us</a></li>
+            
+            <!-- Navigation Links -->
+            <ul class="nav navbar-nav navbar-right" style="display: flex; align-items: center; margin-right: 20px; margin-top: 20px;">
+                <li><a href="aboutUs.html" style="color: white; font-size: 14px; font-weight: bold;">About Us</a></li>
+                <li><a href="#" style="color: white; font-size: 14px; font-weight: bold;">Services</a></li>
+                <li><a href="#" style="color: white; font-size: 14px; font-weight: bold;">Insights</a></li>
+                <li><a href="contactus.html" style="color: white; font-size: 14px; font-weight: bold;">Contact Us</a></li>
                 <li>
-                    <button class="btn navbar-btn" style="line-height: 35px; background-color: transparent;">
+                    <button class="btn navbar-btn" style="background-color: transparent; color: white;">
                         <i class="fas fa-search"></i>
                     </button>
                 </li>
@@ -38,140 +40,165 @@
         </div>
     </nav>
     
-
-    <!-- Header Image Section -->
-    <div class="header-section">
-        <img src="https://www.netguru.com/hs-fs/hubfs/business%20documents%20on%20office%20table%20with%20smart%20phone%20and%20laptop%20computer%20and%20graph%20financial%20with%20social%20network%20diagram%20and%20three%20colleagues%20discussing%20data%20in%20the%20background-Aug-09-2023-10-45-00-9565-AM.jpeg?width=1000&height=667&name=business%20documents%20on%20office%20table%20with%20smart%20phone%20and%20laptop%20computer%20and%20graph%20financial%20with%20social%20network%20diagram%20and%20three%20colleagues%20discussing%20data%20in%20the%20background-Aug-09-2023-10-45-00-9565-AM.jpeg" alt="Header Image" class="header-image">
-        <div class="header-text">
-            <h1>Your Trusted Partner in Accounting & Financial Advisory</h1>
-            <h4>Specializing in Accounting, Taxation, and Corporate Advisory for SMEs and Corporations in Singapore</h4>
-            <button>Get a Free Consultation</button>
-        </div>
-    </div>
-
-    <!-- About Us Overview Section -->
-    <section class="about-overview">
-        <div class="container">
-            <h2>About Pinnacle Accountants LLP</h2>
-            <p>With over 20 years of experience, Pinnacle Accountants LLP specializes in accounting, taxation, and corporate advisory services for Singapore-based SMEs and corporations. Our cloud-based solutions ensure clients have real-time access to financial data, driving better business decisions.</p>
-            <a href="aboutUs.html" class="btn btn-primary">Learn More</a>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="blue-overlay"></div> <!-- Blue overlay for banner and navbar -->
+        <img src="images/homeHeader.png" alt="Banner Image" class="banner-img">
+        <div class="banner-text">
+            <h1>Experience You Can Trust, Service You Can Count On</h1>
+            <p style="font-size: 20px;">Your future is our focus. Let's grow together with proven financial strategies.</p>
+            <button class="btn btn-primary">Start Your Journey With Us</button>
         </div>
     </section>
 
-    
-
-    <!-- Services Overview Section -->
+    <!-- Services Section -->
     <section class="services-overview">
         <div class="container">
-            <h2 class="text-center" style="font-weight: bold;">Our Services</h2>
-            <p class="text-center" style="font-size: 16px;">We offer a full range of accounting, taxation, auditing, and advisory services to meet your business needs.</p>
-            <div class="row">
-                <!-- Accounting Services -->
-                <div class="col-md-6 service-item">
-                    <i class="fas fa-calculator service-icon"></i>
-                    <h4>Accounting Services</h4>
-                    <p>We provide bookkeeping, payroll management, and financial reporting to ensure your business runs smoothly.</p>
-                </div>
-                <!-- Taxation Services -->
-                <div class="col-md-6 service-item">
-                    <i class="fas fa-file-invoice-dollar service-icon"></i>
-                    <h4>Taxation Services</h4>
-                    <p>Our tax experts help with tax planning and compliance to ensure you meet Singapore tax regulations (IRAS).</p>
-                </div>
+            <!-- Rounded label above the title -->
+            <div class="section-label">
+                <span class="label-text">OUR SERVICES</span>
             </div>
-            <div class="row">
-                <!-- Auditing & Corporate Secretarial Services -->
-                <div class="col-md-6 service-item">
-                    <i class="fas fa-check-circle service-icon"></i>
-                    <h4>Auditing & Corporate Secretarial Services</h4>
-                    <p>We offer auditing services to meet corporate governance standards and corporate secretarial support for compliance with ACRA.</p>
+            
+            <!-- Main Heading -->
+            <h2 class="section-title">What We Do</h2>
+
+            <p class="text-center" style="font-size: 18px;">Your goals are our goals. We offer a full range of accounting, taxation, auditing, and advisory services tailored to help you succeed. Your business deserves our best efforts — because your future is our focus.</p>
+
+            <!-- Services Grid -->
+            <div class="row services-grid">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="service-card">
+                        <i class="fas fa-calculator service-icon"></i>
+                        <h4>Accounting Services</h4>
+                        <p>From bookkeeping to payroll management, we'll handle the details so you can focus on growth.</p>
+                    </div>
                 </div>
-                <!-- Advisory Services -->
-                <div class="col-md-6 service-item">
-                    <i class="fas fa-chart-line service-icon"></i>
-                    <h4>Advisory Services</h4>
-                    <p>Our team assists with financial risk management, strategy development, and compliance to help your business thrive.</p>
+                
+                <!-- Card 2 -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="service-card">
+                        <i class="fas fa-file-invoice-dollar service-icon"></i>
+                        <h4>Taxation Services</h4>
+                        <p>Tax planning doesn’t need to be a headache. We make compliance simple and strategic for you.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col-md-6 col-sm-12" style="margin-left: 25px;">
+                    <div class="service-card">
+                        <i class="fas fa-check-circle service-icon"></i>
+                        <h4>Auditing & Corporate Secretarial Services</h4>
+                        <p>Stay compliant and stay ahead. Our auditing services ensure your business meets all standards.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-sm-12" style="margin-left: 20px;">
+                    <div class="service-card">
+                        <i class="fas fa-chart-line service-icon"></i>
+                        <h4>Advisory Services</h4>
+                        <p>Your business strategy deserves expert advice. Let’s navigate financial risks together.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 style="font-weight: bold">What Our Clients Say</h2>
+    <!-- About Us Overview -->
+    <section class="about-section">
+        <div class="container about-container">
             <div class="row">
-                
-                <!-- Testimonial 1 -->
-                <div class="col-md-6">
-                    <div class="testimonial-box">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <!-- Client Logo -->
-                                <img src="images/burpple-logo.jpg" alt="Burpple Logo" class="client-logo">
-                            </div>
-                            <div class="col-xs-9">
-                                <p>"Pinnacle Accountants LLP has been instrumental in helping us maintain compliance and stay ahead of deadlines. Their tax planning and advisory services have significantly improved our financial strategy."</p>
-                                <h5>Burpple</h5>
-                                <button class="btn btn-primary">Let’s Talk</button>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Image Column -->
+                <div class="col-md-6 about-image">
+                    <img src="images/aboutPinnacle.png" alt="About Us Image" class="img-responsive">
                 </div>
                 
-                <!-- Testimonial 2 -->
-                <div class="col-md-6">
-                    <div class="testimonial-box">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <!-- Client Logo -->
-                                <img src="images/love bonito-logo.png" alt="Love, Bonito Logo" class="client-logo">
-                            </div>
-                            <div class="col-xs-9">
-                                <p>"The team at Pinnacle Accountants LLP is highly professional and responsive. Their attention to detail and expertise have helped our business navigate complex regulatory requirements with ease."</p>
-                                <h5>Love, Bonito</h5>
-                                <button class="btn btn-primary">Let’s Talk</button>
-                            </div>
-                        </div>
+                <!-- Text Column -->
+                <div class="col-md-6 about-text">
+                    <div class="section-label" style="margin-right: 240px; margin-top: 50px">
+                        <span class="label-text">ABOUT Pinnacle</span>
                     </div>
+                    <h2 class="section-title" style="color: white;">A Few Words About Us</h2>
+                    <p style="margin-left: 60px;">At Pinnacle, we believe that your success is our success. With over 20 years of experience, we're here to simplify accounting, taxation, and corporate advisory, so you can focus on what truly matters — growing your business. After all, your future is our focus.</p>
+                    <a href="aboutUs.html" class="btn btn-primary" style="margin-left: 60px;">Discover How We Can Help You</a>
                 </div>
-                
             </div>
         </div>
-    </section>
-
+    </section> 
+    
+    <!-- Choose Us Overview -->
     <section class="why-choose-us">
         <div class="container">
-            <h2 class="section-title">Why Choose Us?</h2>
-
-            <!-- Key Differentiators -->
+            <div class="section-label" style="margin-top: 15px;">
+                <span class="label-text">WHY US</span>
+            </div>
+            <h2 class="section-title" style="color: black;">Reasons People Choose Us</h2>
+            <p class="text-center" style="font-size: 18px; margin-top: -10px; margin-bottom: 40px; color: grey;">When you partner with Pinnacle, you're not just getting an accounting firm. You're gaining a trusted advisor committed to your future. Your success is our focus.</p>
             <div class="row">
-                <!-- Certified Accountants & Advisors -->
                 <div class="col-md-3 differentiator-box">
                     <i class="fas fa-user-tie"></i>
                     <h4>Certified Accountants & Advisors</h4>
-                    <p>Our team consists of certified accountants and financial advisors with expertise in the Singapore market.</p>
+                    <p>We bring certified expertise and local market knowledge — so you get advice you can trust.</p>
                 </div>
-
-                <!-- Tailored Financial Solutions -->
                 <div class="col-md-3 differentiator-box">
                     <i class="fas fa-handshake"></i>
                     <h4>Tailored Financial Solutions</h4>
-                    <p>We provide personalized financial advice tailored to meet the unique needs of your business.</p>
+                    <p>Your business is unique. Our financial solutions are crafted to fit your specific needs.</p>
                 </div>
-
-                <!-- Cloud-Based Accounting -->
                 <div class="col-md-3 differentiator-box">
                     <i class="fas fa-cloud"></i>
                     <h4>Cloud-Based Accounting</h4>
-                    <p>Benefit from real-time access to your financial data and insights through our cloud-based solutions.</p>
+                    <p>Stay connected to your finances wherever you are. Our cloud-based services put control at your fingertips.</p>
                 </div>
-
-                <!-- 20 Years of Expertise -->
                 <div class="col-md-3 differentiator-box">
                     <i class="fas fa-briefcase"></i>
                     <h4>Over 20 Years of Expertise</h4>
-                    <p>With over two decades of experience, we help businesses navigate the complexities of Singapore’s regulatory environment.</p>
+                    <p>Our experience helps us guide businesses through the complexities of Singapore's financial landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <!-- Background Image -->
+        <img src="images/clientTestimonial.png" alt="Background" class="background-img">
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Column: Title and Description -->
+                <div class="col-md-6">
+                    <div class="section-label" style="margin-top: 5px; margin-right: 400px;">
+                        <span class="label-text">Testimonials</span>
+                    </div>
+                    <h2 class="testimonial-title">What Our Clients Say</h2>
+                    <p style="font-size: 16px;">Our clients' success stories reflect the relationships we've built. At Pinnacle, your goals are our goals, and their future is our focus.</p>
+                </div>
+                    <div class="row testimonials-box">
+                        <!-- Testimonials Column -->
+                        <div class="col-md-6 testimonials-box">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="images/burpple-logo.jpg" alt="Burpple Logo" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4 style="text-align:center; margin-left: -5px;">Burpple</h4>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text" style="font-size: 12px; text-align: center;">Pinnacle’s cloud-based solutions have simplified our finances and compliance. I now have real-time access to data, and their expert advisory has helped us maximize tax savings. They’re more than just accountants—they’re trusted advisors.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 testimonials-box">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="images/love bonito-logo.png" alt="Love, Bonito Logo" class="testimonial-img">
+                                    <div class="testimonial-info">
+                                        <h4 style="text-align:center; ">Love, Bonito</h4>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text" style="font-size: 12px; text-align: center;">Pinnacle stands out for their personalized service and innovative solutions. Their cloud-based system has improved our reporting, especially during AGM season, ensuring we meet all regulatory deadlines effortlessly.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,24 +207,24 @@
     <!-- Call to Action Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="row">
-                
-                <!-- Free Consultation Section -->
+            <div class="section-label" style="margin-top: 5px;">
+                <span class="label-text">Begin Your Transformation</span>
+            </div>
+            <h2 class="section-title" style="color: black;">Let’s Achieve Greatness Together</h2>
+            <div class="row" style="margin-left: 30px;">
                 <div class="col-md-6">
                     <div class="cta-box consultation-box">
                         <h2>Get Your Free Consultation</h2>
-                        <p>Take the first step towards better financial management. Contact us today for a free consultation with our expert advisors.</p>
-                        <a href="contactus.html" class="btn btn-primary">Request a Consultation</a>
+                        <p>Let's start a conversation about your business. Contact us today, and together, we'll plan for a brighter future.</p>
+                        <a href="contactus.html" class="btn btn-primary">Let's Talk</a>
                     </div>
                 </div>
-                
-                <!-- Newsletter Sign-Up Section -->
                 <div class="col-md-6">
                     <div class="cta-box newsletter-box">
                         <h2>Subscribe to Our Newsletter</h2>
-                        <p>Stay updated on the latest in financial management, tax planning, and regulatory changes. Sign up for our newsletter.</p>
+                        <p>Join our community for insights that drive results. Stay updated with the latest in financial management.</p>
                         <form action="#" method="post" class="newsletter-form">
-                            <input style="margin-top: 15px;"   type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email" required style="margin-top: 5px;">
                             <button type="submit" class="btn btn-primary">Subscribe</button>
                         </form>
                     </div>
@@ -206,29 +233,30 @@
         </div>
     </section>
 
-    <!-- Partner Logos or Affiliations Section -->
+    <!-- Partner -->
     <section class="partners-section">
         <div class="container">
-            <h2 style="font-weight: bold; text-align: center;">Our Partners & Affiliations</h2>
-            <div class="row justify-content-center" style="margin-left: 360px;">
-                
-                <!-- Partner 1 (ACRA Logo) -->
-                <div class="col-md-3 col-sm-6">
+            <div class="section-label" style="margin-top: 5px;">
+                <span class="label-text">WHO WE WORK WITH</span>
+            </div>
+            <h2 class="section-title">Our Partners</h2>
+            <div class="row justify-content-center partners-logo-row" style="margin-right: -50px;">
+                <!-- Partner 1 -->
+                <div class="col-md-2 col-sm-6">
                     <div class="partner-logo">
                         <a href="https://www.acra.gov.sg/"><img src="images/acra-logo.png" alt="ACRA" class="img-fluid"></a>
                     </div>
                 </div>
-                
-                <!-- Partner 2 (IRAS Logo) -->
-                <div class="col-md-3 col-sm-6">
+                <!-- Partner 2 -->
+                <div class="col-md-2 col-sm-6">
                     <div class="partner-logo">
                         <a href="https://www.iras.gov.sg/"><img src="images/IRAS-logo.jpg" alt="IRAS" class="img-fluid"></a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
+    
 
     <!-- Footer Section -->
     <footer class="footer-section">
