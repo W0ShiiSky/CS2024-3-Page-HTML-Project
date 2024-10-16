@@ -1,83 +1,102 @@
-/* Header Navigation Styling */
-.nav-left-adjust {
-    margin-left: 20px;
-}
-
-.navbar {
-    background-color: #f8f8f8;
-    height: 70px;
-}
-
-.navbar-default {
-    background-color: #f8f8f8;
-    height: 70px;
-}
-
-.navbar-header, .navbar-nav > li > a {
-    height: 70px;
-    line-height: 35px;
-}
-
-.navbar-brand {
-    line-height: 35px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Navbar adjustments for logo and alignment */
 .navbar {
-    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: none;
+    background-color: transparent;
 }
 
-.header-section {
-    position: relative;
-    text-align: center;
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav > li > a {
     color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 15px;
 }
 
-.header-image {
+.navbar-nav > li > a:hover {
+    color: #007bff;
+}
+
+/* Banner Section */
+/* Banner Section with Sliced Effect */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 750px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.banner-img {
     width: 100%;
     height: auto;
-    max-height: 600px;
+    max-height: 1200px;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
-.header-text {
+/* Blue Overlay for both navbar and banner */
+.blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 31, 63, 0.7); /* Blue overlay with transparency */
+    z-index: 2; /* Make sure the overlay is above the image */
+}
+
+
+.banner-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 10px;
+    z-index: 4; /* Ensure text is on top of the overlay and slice */
 }
 
-.header-text h1 {
+.banner-text h1 {
     font-size: 48px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.header-text h4 {
-    font-size: 24px;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.banner-text p {
+    font-size: 18px;
 }
 
-.header-text button {
-    background-color: #e0e0e0; 
-    color: #333333;
+.banner-text button {
+    background-color: #007bff; 
+    color: white;
     border: none;
     padding: 15px 30px;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
     border-radius: 20px;
-}
+} 
 
 
 /* Main Blue Color */
